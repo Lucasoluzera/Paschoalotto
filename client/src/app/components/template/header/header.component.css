@@ -1,0 +1,19 @@
+.header{
+    display: flex;
+    align-items: center;
+    background-color: #6dcef5;
+}
+
+.header a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.header .logo{
+    max-height: 62px;
+}
+
+.header .title-group{
+    color: white;
+}

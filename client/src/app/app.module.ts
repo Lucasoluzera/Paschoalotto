@@ -13,8 +13,8 @@ import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatListModule } from "@angular/material/list";
 import { HomeComponent } from './views/home/home.component';
 import {MatCardModule} from "@angular/material/card";
-import { IngressosCrudComponent } from './views/ingressos-crud/ingressos-crud.component';
-import { IngressosCadastroComponent } from './components/ingressos/ingressos-cadastro/ingressos-cadastro.component';
+import { DividasCrudComponent } from './views/ingressos-crud/dividas-crud.component';
+import { DividasCadastroComponent } from './components/dividas/dividas-cadastro/dividas-cadastro.component';
 import { ForDirective } from './directives/for.directive';
 import {MatButtonModule} from "@angular/material/button";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
@@ -22,12 +22,11 @@ import {HttpClientModule} from "@angular/common/http";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {FormsModule} from "@angular/forms";
-import { IngressosConsultarComponent } from './components/ingressos/ingressos-consultar/ingressos-consultar.component';
-import { IngressosConsultar2Component } from './components/ingressos/ingressos-consultar2/ingressos-consultar2.component';
+import { DividasConsultarComponent } from './components/dividas/dividas-consultar/dividas-consultar.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-import { IngressosAlterarComponent } from './components/ingressos/ingressos-alterar/ingressos-alterar.component';
+import { DividasAlterarComponent } from './components/dividas/dividas-alterar/dividas-alterar.component';
 
 
 @NgModule({
@@ -37,12 +36,11 @@ import { IngressosAlterarComponent } from './components/ingressos/ingressos-alte
     FooterComponent,
     NavComponent,
     HomeComponent,
-    IngressosCrudComponent,
-    IngressosCadastroComponent,
+    DividasCrudComponent,
+    DividasCadastroComponent,
     ForDirective,
-    IngressosConsultarComponent,
-    IngressosConsultar2Component,
-    IngressosAlterarComponent,
+    DividasConsultarComponent,
+    DividasAlterarComponent,
   ],
   imports: [
     BrowserModule,

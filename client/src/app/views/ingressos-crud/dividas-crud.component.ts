@@ -3,10 +3,10 @@ import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-ingressos-crud',
-  templateUrl: './ingressos-crud.component.html',
-  styleUrls: ['./ingressos-crud.component.css']
+  templateUrl: './dividas-crud.component.html',
+  styleUrls: ['./dividas-crud.component.css']
 })
-export class IngressosCrudComponent implements OnInit {
+export class DividasCrudComponent implements OnInit {
 
   constructor(private router: Router) { }
 
@@ -14,7 +14,7 @@ export class IngressosCrudComponent implements OnInit {
   }
 
   navigateToProductCreate() : void{
-    this.router.navigate(['/ingressos/cadastro'])
+    this.router.navigate(['/dividas/cadastro'])
     console.log('create')
   }
 

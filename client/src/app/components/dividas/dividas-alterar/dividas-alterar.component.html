@@ -6,13 +6,14 @@
     <form>
             <mat-form-field>
                 <input matInput
-                       placeholder="Nome do rolê"
-                       [(ngModel)]="ingresso.name" name="name">
+                       disabled="true"
+                       placeholder="Código"
+                       [(ngModel)]="divida.id" name="Id">
             </mat-form-field>
             <mat-form-field>
                 <input matInput
-                       placeholder="Preço do ingresso em R$"
-                       [(ngModel)]="ingresso.price" name="price">
+                       placeholder="Valor da Divida"
+                       [(ngModel)]="divida.valorDivida" name="price">
             </mat-form-field>
         </form>
 

@@ -1,11 +1,9 @@
-import {NgModule} from '@angular/core';
-import {Routes, RouterModule} from '@angular/router';
-
+import {RouterModule, Routes} from "@angular/router";
 import {HomeComponent} from "./views/home/home.component";
-
-import {IngressosCrudComponent} from "./views/ingressos-crud/ingressos-crud.component";
-import {IngressosCadastroComponent} from "./components/ingressos/ingressos-cadastro/ingressos-cadastro.component";
-import {IngressosAlterarComponent} from "./components/ingressos/ingressos-alterar/ingressos-alterar.component";
+import {DividasCrudComponent} from "./views/ingressos-crud/dividas-crud.component";
+import {DividasCadastroComponent} from "./components/dividas/dividas-cadastro/dividas-cadastro.component";
+import {DividasAlterarComponent} from "./components/dividas/dividas-alterar/dividas-alterar.component";
+import {NgModule} from "@angular/core";
 
 
 const routes: Routes = [
@@ -14,16 +12,16 @@ const routes: Routes = [
         component: HomeComponent
     },
     {
-        path: "ingressos",
-        component: IngressosCrudComponent
+        path: 'dividas',
+        component: DividasCrudComponent
     },
     {
-        path: "ingressos/cadastro",
-        component: IngressosCadastroComponent
+        path: 'novo',
+        component: DividasCadastroComponent
     },
     {
-        path: "ingressos/alterar/:id",
-        component: IngressosAlterarComponent
+        path: ':id/editar',
+        component: DividasAlterarComponent
     }
 ];
 

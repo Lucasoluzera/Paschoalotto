@@ -1,24 +1,82 @@
 <mat-card>
     <mat-card-title>
-        Alterar Rolê
+        Alterar Dívida
     </mat-card-title>
 
-    <form>
-            <mat-form-field>
-                <input matInput
-                       disabled="true"
-                       placeholder="Código"
-                       [(ngModel)]="divida.id" name="Id">
-            </mat-form-field>
-            <mat-form-field>
-                <input matInput
-                       placeholder="Valor da Divida"
-                       [(ngModel)]="divida.valorDivida" name="price">
-            </mat-form-field>
-        </form>
+    <form [formGroup]="formulario">
+        <div>
+            <label for="txtCodigo">Código:</label>
+            <br/>
+            <input id="txtCodigo" name="txtCodigo" type="number" class="form-control" formControlName="id">
+        </div>
+        <br/>
+        <div>
+            <label for="txtTelefone">Telefone:</label>
+            <br/>
+            <input id="txtTelefone" name="txtTelefone" type="number" class="form-control"
+                   formControlName="telefone">
+        </div>
+        <br>
+        <div>
+            <label for="txtValorDivida">Valor da Dívida:</label>
+            <br/>
+            <input id="txtValorDivida" name="txtValorDivida" type="number" class="form-control"
+                   formControlName="valorDivida">
+        </div>
+        <br/>
+        <div>
+            <label for="txtQtdeParcelas">Quantidade Parcelas:</label>
+            <br/>
+            <input id="txtQtdeParcelas" name="txtQtdeParcelas" type="number" class="form-control"
+                   formControlName="qtdeParcelas"
+                   maxlength="100">
+        </div>
+        <br/>
+        <div>
+            <label for="txtPorcentagemComissao">Porcentagem Comissão:</label>
+            <br/>
+            <input id="txtPorcentagemComissao" name="txtPorcentagemComissao" type="number" class="form-control"
+                   formControlName="porcentagemComissao">
+        </div>
+        <br/>
+        <div>
+            <label for="txtDiaVencimento">Data do Vencimento:</label>
+            <br/>
+            <input id="txtDiaVencimento" name="txtDiaVencimento" type="date" class="form-control"
+                   formControlName="diaVencimento">
+        </div>
+
+
+        <div>
+            <label for="selTipoJuros">Tipo Juros:</label>
+            <br/>
+            <mat-select
+
+                    name="selTipoJuros"
+                    id="selTipoJuros"
+                    formControlName="tipoJuros" class="form-control">
+                <mat-option *ngFor="let item of tipoJuros | keyvalue"
+                            [value]="item['key']">{{ item['value'] }}</mat-option>
+            </mat-select>
+        </div>
+
+        <br/>
+
+        <div>
+            <label>Parcelas: </label>
+            <label *ngFor="let item of divida.parcelas">/ R${{item}},00 /</label>
+            <br/>
+            <label>Vencimento: </label>
+            <label *ngFor="let item of divida.datasVencimento">/ {{item}} /</label>
+            <br>
+            <label>Lucro Paschoalotto: </label>
+            <label>R${{divida.valorComissao}},00</label>
+        </div>
+
+    </form>
 
     <button class="buttonGreen" mat-raised-button
-            (click)="alterarIngresso()">
+            (click)="alterarDivida()">
         Salvar
     </button>
 

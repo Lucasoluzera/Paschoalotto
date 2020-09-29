@@ -1,7 +1,7 @@
 .header{
     display: flex;
     align-items: center;
-    background-color: #6dcef5;
+    background: linear-gradient(to right, #4465ab, #5896e8);
 }
 
 .header a {

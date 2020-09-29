@@ -1,4 +1,4 @@
 export enum TipoJuros {
-    COMPOSTO,
-    SIMPLES
+    COMPOSTO = " Juros Compostos",
+    SIMPLES = " Juros Simples"
 }

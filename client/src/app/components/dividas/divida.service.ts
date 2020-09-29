@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
-import {DividaDTO} from "../../model/divida-dto";
+import {DividaDTO} from "../../model/dividaDTO";
 import {Observable, throwError} from "rxjs";
 import {catchError} from "rxjs/operators";
 
@@ -42,7 +42,7 @@ export class DividaService {
     }
 
     listar(): Observable<any> {
-        return this.http.get<any>(this.baseUrl)
+        return this.http.get<any>(this.baseUrl + `/pesquisar`)
             .pipe(
                 catchError(this.obterErro)
             );

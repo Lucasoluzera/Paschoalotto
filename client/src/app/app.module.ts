@@ -13,7 +13,7 @@ import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatListModule } from "@angular/material/list";
 import { HomeComponent } from './views/home/home.component';
 import {MatCardModule} from "@angular/material/card";
-import { DividasCrudComponent } from './views/ingressos-crud/dividas-crud.component';
+import { DividasCrudComponent } from './views/divida-crud/dividas-crud.component';
 import { DividasCadastroComponent } from './components/dividas/dividas-cadastro/dividas-cadastro.component';
 import { ForDirective } from './directives/for.directive';
 import {MatButtonModule} from "@angular/material/button";
@@ -21,12 +21,13 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {HttpClientModule} from "@angular/common/http";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { DividasConsultarComponent } from './components/dividas/dividas-consultar/dividas-consultar.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { DividasAlterarComponent } from './components/dividas/dividas-alterar/dividas-alterar.component';
+import {MatSelectModule} from "@angular/material/select";
 
 
 @NgModule({
@@ -42,24 +43,26 @@ import { DividasAlterarComponent } from './components/dividas/dividas-alterar/di
     DividasConsultarComponent,
     DividasAlterarComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatListModule,
-    MatCardModule,
-    MatButtonModule,
-    MatSnackBarModule,
-    HttpClientModule,
-    FormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatToolbarModule,
+        MatSidenavModule,
+        MatListModule,
+        MatCardModule,
+        MatButtonModule,
+        MatSnackBarModule,
+        HttpClientModule,
+        FormsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatSortModule,
+        ReactiveFormsModule,
+        MatSelectModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

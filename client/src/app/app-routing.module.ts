@@ -1,6 +1,6 @@
 import {RouterModule, Routes} from "@angular/router";
 import {HomeComponent} from "./views/home/home.component";
-import {DividasCrudComponent} from "./views/ingressos-crud/dividas-crud.component";
+import {DividasCrudComponent} from "./views/divida-crud/dividas-crud.component";
 import {DividasCadastroComponent} from "./components/dividas/dividas-cadastro/dividas-cadastro.component";
 import {DividasAlterarComponent} from "./components/dividas/dividas-alterar/dividas-alterar.component";
 import {NgModule} from "@angular/core";
@@ -12,15 +12,15 @@ const routes: Routes = [
         component: HomeComponent
     },
     {
-        path: 'dividas',
+        path: 'divida',
         component: DividasCrudComponent
     },
     {
-        path: 'novo',
+        path: 'divida/novo',
         component: DividasCadastroComponent
     },
     {
-        path: ':id/editar',
+        path: 'divida/:id/editar',
         component: DividasAlterarComponent
     }
 ];

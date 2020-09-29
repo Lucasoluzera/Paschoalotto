@@ -1,5 +1,5 @@
 .sidenav{
-    background-color: black;
+    background: linear-gradient(120deg, rgba(0,0,0,1) 0%, rgba(59,59,59,1) 83%, rgba(73,73,73,1) 100%);
     width: 200px;
 }
 

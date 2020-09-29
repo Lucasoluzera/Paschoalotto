@@ -1,6 +1,7 @@
 package com.example.Paschoalotto.controller;
 
 import com.example.Paschoalotto.business.IDividaBusiness;
+import com.example.Paschoalotto.dtos.DividaDTO;
 import com.example.Paschoalotto.model.Divida;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -11,21 +12,20 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("/templateDocumentoGed")
+@RequestMapping("/divida")
 public class DividaController {
 
     @Autowired
     private IDividaBusiness _dividaBusiness;
 
-
     @PostMapping
-    public ResponseEntity<Divida> salvar(@Valid @RequestBody Divida divida) throws Exception {
-        return this._dividaBusiness.salvar(divida);
+    public ResponseEntity<DividaDTO> salvar(@Valid @RequestBody DividaDTO dividaDTO) throws Exception {
+        return this._dividaBusiness.salvar(dividaDTO);
     }
 
     @PutMapping(value = "/{id}")
-    public ResponseEntity<Divida> alterar(@Valid @RequestBody Divida divida, @PathVariable Long id) {
-        return this._dividaBusiness.alterar(divida, id);
+    public ResponseEntity<DividaDTO> alterar(@Valid @RequestBody DividaDTO dividaDTO, @PathVariable Long id) {
+        return this._dividaBusiness.alterar(dividaDTO, id);
     }
 
     @DeleteMapping(path = {"/{id}"})
@@ -34,12 +34,12 @@ public class DividaController {
     }
 
     @GetMapping(value = "/{id}")
-    public ResponseEntity<Divida> buscarPorId(@PathVariable Long id){
+    public ResponseEntity<DividaDTO> buscarPorId(@PathVariable Long id){
         return this._dividaBusiness.buscarPorId(id);
     }
 
     @GetMapping(value = "/pesquisar")
-    public Page<Divida> pesquisar(Pageable pageable) {
+    public Page<DividaDTO> pesquisar(Pageable pageable) {
         return this._dividaBusiness.pesquisar(pageable);
     }
 

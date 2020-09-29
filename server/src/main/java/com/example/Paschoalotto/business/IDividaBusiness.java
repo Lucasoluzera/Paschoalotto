@@ -1,5 +1,6 @@
 package com.example.Paschoalotto.business;
 
+import com.example.Paschoalotto.dtos.DividaDTO;
 import com.example.Paschoalotto.model.Divida;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -7,13 +8,13 @@ import org.springframework.http.ResponseEntity;
 
 public interface IDividaBusiness {
 
-    ResponseEntity<Divida> buscarPorId(Long id);
+    ResponseEntity<DividaDTO> buscarPorId(Long id);
 
-    Page<Divida> pesquisar(Pageable pageable);
+    Page<DividaDTO> pesquisar(Pageable pageable);
 
-    ResponseEntity<Divida> salvar(Divida divida);
+    ResponseEntity<DividaDTO> salvar(DividaDTO divida);
 
-    ResponseEntity<Divida> alterar(Divida divida, Long id);
+    ResponseEntity<DividaDTO> alterar(DividaDTO divida, Long id);
 
     ResponseEntity<?> excluir(Long id);
 }

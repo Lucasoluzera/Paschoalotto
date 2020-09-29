@@ -2,19 +2,20 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 
 @Component({
-  selector: 'app-ingressos-crud',
-  templateUrl: './ingressos-crud.component.html',
-  styleUrls: ['./ingressos-crud.component.css']
+  selector: 'app-divida-crud',
+  templateUrl: './dividas-crud.component.html',
+  styleUrls: ['./dividas-crud.component.css']
 })
-export class IngressosCrudComponent implements OnInit {
+export class DividasCrudComponent implements OnInit {
 
   constructor(private router: Router) { }
 
   ngOnInit(): void {
+    console.log(`teste`);
   }
 
   navigateToProductCreate() : void{
-    this.router.navigate(['/ingressos/cadastro'])
+    this.router.navigate(['divida/novo'])
     console.log('create')
   }
 
